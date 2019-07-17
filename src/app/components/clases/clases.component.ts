@@ -15,6 +15,8 @@ export class ClasesComponent implements OnInit {
 
   loading:boolean = false;
 
+  mensaje:string = "Espere por favor.";
+
   constructor() { }
 
   ngOnInit() {
@@ -24,6 +26,14 @@ export class ClasesComponent implements OnInit {
     this.loading = true;
 
     setTimeout( ()=> this.loading = false, 3000 )
+
+    setTimeout( ()=> this.mensaje = "Espere por favor..", 1000 )
+
+    setTimeout( ()=> this.mensaje = "Espere por favor...", 2000 )
+
+    this.mensaje = "Espere por favor.";
   }
 
+
 }
+
